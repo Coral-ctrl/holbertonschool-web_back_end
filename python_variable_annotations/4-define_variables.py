@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Module that provided function to_str"""
+"""Module that defines and annotates variables with specified values."""
 
 
-def to_str(n: float) -> str:
-    """returns the string representation of the float"""
-    return str(n)
+a: int = 1
+pi: float = 3.14
+i_understand_annotations: bool = True
+school: str = "Holberton"
