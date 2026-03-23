@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Module that provides a type-annotated function returning lengths of sequences."""
+"""
+Module that provides a type-annotated function
+returning lengths of sequences.
+"""
 from typing import Iterable, Sequence, List, Tuple
 
 
