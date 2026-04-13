@@ -45,16 +45,16 @@ class Server:
         """
         dataset = self.indexed_dataset()
         assert index is not None and 0 <= index < len(self.dataset())
- 
+
         data = []
         current = index
- 
+
         while len(data) < page_size:
             row = dataset.get(current)
             if row is not None:
                 data.append(row)
             current += 1
- 
+
         return {
             'index': index,
             'data': data,
