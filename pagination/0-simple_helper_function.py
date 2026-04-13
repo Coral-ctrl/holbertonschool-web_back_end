@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Module providing a simple helper function for pagination index calculation."""
+"""
+Module providing a simple helper function for pagination index calculation.
+"""
 
 from typing import Tuple
 
