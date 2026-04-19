@@ -3,7 +3,7 @@
 from pymongo import MongoClient
 
 
-def log_stats():
+if __name__ == "__main__":
     """Prints stats about Nginx logs stored in MongoDB."""
     client = MongoClient('mongodb://127.0.0.1:27017')
     collection = client.logs.nginx
@@ -18,7 +18,3 @@ def log_stats():
 
     status_check = collection.count_documents({"method": "GET", "path": "/status"})
     print(f"{status_check} status check")
-
-
-if __name__ == "__main__":
-    log_stats()
