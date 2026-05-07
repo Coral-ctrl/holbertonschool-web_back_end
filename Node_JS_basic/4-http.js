@@ -1,10 +1,10 @@
 const http = require('http');
 
 const app = http.createServer((req, res) => {
-    // Set response header to plain text for any endpoint
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    // Send the same response body regardless of the URL path
-    res.end('Hello Holberton School1');
+  // Set response header to plain text for any endpoint
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  // Send the same response body regardless of the URL path
+  res.end('Hello Holberton School1');
 });
 
 // Start listening on port 1245
