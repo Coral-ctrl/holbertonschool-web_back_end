@@ -50,7 +50,7 @@ const app = http.createServer((req, res) => {
         res.end(`This is the list of our students\n${err.message}`);
       });
   } else {
-    es.end(`Hello Holberton School!`);
+    res.end(`Hello Holberton School!`);
   }
 });
 
