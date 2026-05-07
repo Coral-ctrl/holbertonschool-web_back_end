@@ -8,24 +8,24 @@ function countStudents(path) {
         reject(new Error('Cannot load the database'));
         return;
       }
-   
+
       const lines = data.split('\n').filter((line) => line.trim() !== '');
       const students = lines.slice(1);
-   
+
       // Build the output as a string instead of console.log
       let output = `Number of students: ${students.length}`;
-   
+
       const fields = {};
       for (const student of students) {
         const [firstname, , , field] = student.split(',');
         if (!fields[field]) fields[field] = [];
         fields[field].push(firstname);
       }
-   
+
       for (const [field, names] of Object.entries(fields)) {
         output += `\nNumber of students in ${field}: ${names.length}. List: ${names.join(', ')}`;
       }
-  
+
       resolve(output);
     });
   });
@@ -50,7 +50,7 @@ const app = http.createServer((req, res) => {
         res.end(`This is the list of our students\n${err.message}`);
       });
   } else {
-    res.end(`Hello Holberton School!`);
+    res.end('Hello Holberton School!');
   }
 });
 
